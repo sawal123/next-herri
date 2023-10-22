@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Direct from "../../component/direct";
@@ -11,14 +11,14 @@ function page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setEmail(e.target.value);
   };
-  const handleInputPassword = (e) => {
+  const handleInputPassword = (e: { target: { value: SetStateAction<string>; }; }) => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log("Nilai Email:", email);
     console.log("Nilai Email:", password);
