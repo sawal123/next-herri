@@ -1,6 +1,6 @@
 /*# sourceMappingURL=index.css.map */
 .body {
-    background-image: url("/images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("/images/bg.png");
+    background-size: contain;
+    background-repeat: repeat;
   }
